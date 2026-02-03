@@ -14,11 +14,11 @@ export const NAV_LINKS = [
 ];
 
 export const HERO_SECTION =
-  "I’m a passionate web developer dedicated to creating efficient, responsive, and user-friendly websites. With experience in VueJS, NuxtJS, Laravel, NestJS, I strive to bring innovative ideas to life and solve real-world problems. Let’s build something amazing together!";
+  "Sopheak Hun is a professional Web Developer and DevOps Engineer in Cambodia providing Laravel development, NuxtJS frontend solutions, and cloud infrastructure services for businesses in Phnom Penh and across Cambodia. He specializes in building scalable web applications, automating deployments with CI/CD pipelines, and optimizing server performance using Docker and Kubernetes.";
 
 export const ABOUT_SECTION = {
   section1:
-    "I’m a web developer with experience in building efficient and scalable solutions. My focus is on delivering quality work, collaborating with teams, and constantly improving my skills.",
+    "I’m a Web Developer and DevOps Engineer based in Cambodia with experience building efficient, scalable, and high-performance web applications. I specialize in modern technologies such as VueJS, NuxtJS, Laravel, and NestJS, delivering secure and maintainable solutions tailored to business needs. My focus is on writing clean code, optimizing system performance, and implementing reliable DevOps practices including CI/CD, Docker, and cloud infrastructure management. I enjoy collaborating with teams, solving complex technical challenges, and continuously improving my skills to stay aligned with industry best practices. I am passionate about helping startups and businesses in Cambodia transform ideas into real-world digital products that are fast, responsive, and built to scale.",
 };
 
 export const PROJECTS = [

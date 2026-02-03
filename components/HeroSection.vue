@@ -12,9 +12,8 @@ import { HERO_SECTION } from '@/data/constants'
       class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10 ">
       <h1 class="font-semibold text-4xl sm:text-5xl md:text-6xl ">
         <span class="typewriter">
-        Hi! I'm
         <span class="poppins text-primary">Sopheak</span> HUN, <br />Web 
-        <span class="poppins text-primary">Developer</span>
+        <span class="poppins text-primary">Developer</span> & DevOps Engineer
         </span>
 
       </h1>

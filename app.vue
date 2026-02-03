@@ -5,26 +5,45 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
-  link: [{ rel: "icon", type: "image/png", href: "/favicon-16.png" }],
+  link: [{ rel: "icon", type: "image/png", href: "/favicon-16.png" },{rel: "canonical", href: "https://sopheak.site/"}],
 });
 
 useSeoMeta({
+title: "Sopheak Hun | Web Developer & DevOps Engineer in Cambodia",
   description:
-    "Hi! I'm Sopheak HUN, a passionate Web Developer specializing in creating modern, responsive, and user-friendly websites.",
-  author: "Sopheak HUN",
-  ogTitle: "Sopheak HUN - Portfolio | Web Developer",
+    "Sopheak Hun is a Web Developer and DevOps Engineer based in Cambodia, specializing in Laravel, Nuxt, Kubernetes, and scalable cloud infrastructure solutions.",
+  ogTitle: "Web Developer in Cambodia | Laravel & Nuxt - Sopheak Hun",
   ogDescription:
-    "Hi! I'm Sopheak HUN, a passionate Web Developer specializing in creating modern, responsive, and user-friendly websites.",
-  ogImage: "https://sopheak-hun.vercel.app/hero.jpg", // Fixed URL
-  ogUrl: "https://sopheak-hun.vercel.app/",
+    "Professional Web Developer based in Cambodia specializing in Laravel, Nuxt, and DevOps solutions for businesses in Cambodia.",
+  ogImage: "https://sopheak.site/hero.jpg",
+  ogUrl: "https://sopheak.site/",
   ogType: "website",
-  ogSiteName: "Sopheak HUN Portfolio", // Added og:site_name
+  ogSiteName: "Sopheak Hun - Web Developer Cambodia",
   twitterCard: "summary_large_image",
-  twitterTitle: "Sopheak HUN - Portfolio | Web Developer",
+  twitterTitle: "Web Developer in Cambodia - Sopheak Hun",
   twitterDescription:
-    "Hi! I'm Sopheak HUN, a passionate Web Developer specializing in creating modern, responsive, and user-friendly websites.",
-  twitterImage: "https://sopheak-hun.vercel.app/hero.jpg", // Fixed URL
+    "Laravel, Nuxt & DevOps specialist helping Cambodian businesses build modern web applications.",
+  twitterImage: "https://sopheak.site/hero.jpg",
 });
+
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sopheak Hun",
+  "url": "https://sopheak.site",
+  "jobTitle": "Web Developer & DevOps Engineer",
+  "address": {
+    "@type": "12000",
+    "addressCountry": "Cambodia"
+  },
+  "sameAs": [
+    "https://github.com/Sopheak6844",
+    "https://linkedin.com/in/sopheak-hun/"
+  ]
+}
 </script>
 
 <template>
