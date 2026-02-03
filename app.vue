@@ -1,12 +1,36 @@
 <script setup lang="ts">
 import { Analytics } from "@vercel/analytics/nuxt";
 useHead({
-  title: "Sopheak HUN - Portfolio | Web Developer",
+  title: "Sopheak Hun | Web Developer & DevOps Engineer in Cambodia",
   htmlAttrs: {
     lang: "en",
   },
-  link: [{ rel: "icon", type: "image/png", href: "/favicon-16.png" },{rel: "canonical", href: "https://sopheak.site/"}],
+  link: [
+    { rel: "icon", type: "image/png", href: "/favicon-16.png" },
+    { rel: "canonical", href: "https://sopheak.site/" }
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Sopheak Hun",
+        url: "https://sopheak.site",
+        jobTitle: "Web Developer & DevOps Engineer",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "Cambodia"
+        },
+        sameAs: [
+          "https://github.com/Sopheak6844",
+          "https://linkedin.com/in/sopheak-hun/"
+        ]
+      })
+    }
+  ]
 });
+
 
 useSeoMeta({
 title: "Sopheak Hun | Web Developer & DevOps Engineer in Cambodia",
@@ -26,24 +50,6 @@ title: "Sopheak Hun | Web Developer & DevOps Engineer in Cambodia",
   twitterImage: "https://sopheak.site/hero.jpg",
 });
 
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Sopheak Hun",
-  "url": "https://sopheak.site",
-  "jobTitle": "Web Developer & DevOps Engineer",
-  "address": {
-    "@type": "12000",
-    "addressCountry": "Cambodia"
-  },
-  "sameAs": [
-    "https://github.com/Sopheak6844",
-    "https://linkedin.com/in/sopheak-hun/"
-  ]
-}
 </script>
 
 <template>
