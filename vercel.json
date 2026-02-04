@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://sopheak.site/(.*)",
+      "destination": "https://www.sopheak.site/$1",
+      "permanent": true
+    }
+  ]
+}
