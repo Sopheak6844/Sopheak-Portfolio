@@ -14,7 +14,7 @@
 <template>
   <div >
     <div >
-      <main class="flex flex-col flex-1 p-4">
+      <main class="flex flex-col flex-1 p-4" >
         <HeroSection />
         <div class="md:mb-36" />
         <ProjectSection />
