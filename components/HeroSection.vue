@@ -13,7 +13,8 @@ import { HERO_SECTION } from '@/data/constants'
       <h1 class="font-semibold text-4xl sm:text-5xl md:text-6xl ">
         <span class="typewriter">
         <span class="poppins text-primary">Sopheak</span> HUN, <br />Web 
-        <span class="poppins text-primary">Developer</span> & DevOps Engineer
+        <span class="poppins text-primary">Developer</span> & DevOps 
+        <span class="poppins text-primary">Engineer</span>
         </span>
 
       </h1>
