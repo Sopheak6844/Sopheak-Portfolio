@@ -2,6 +2,12 @@
 import { Analytics } from "@vercel/analytics/nuxt";
 useHead({
   title: "Sopheak Hun | Web Developer & DevOps Engineer in Cambodia",
+    meta: [
+    {
+      name: 'google-site-verification',
+      content: '370GbEZWEoxI2gp66i_pvfoAqP0ZUnyYas2E28C4-Q0'
+    }
+  ],
   htmlAttrs: {
     lang: "en",
   },
