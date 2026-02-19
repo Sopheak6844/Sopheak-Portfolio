@@ -7,7 +7,7 @@ app: {
     meta: [
       {
         name: "google-site-verification",
-        content: "370GbEZWEoxI2gp66i_pvfoAqP0ZUnyYas2E28C4-Q0",
+        content: "sL0BqO-SClV_hO97BHNFJlKyHXgNewc-VSrzvi7jiqo",
       },
     ],
   },
