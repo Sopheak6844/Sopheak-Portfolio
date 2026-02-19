@@ -2,6 +2,16 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
+   app: {
+    head: {
+      meta: [
+        {
+          name: "google-site-verification",
+          content: "google-site-verification=370GbEZWEoxI2gp66i_pvfoAqP0ZUnyYas2E28C4-Q0",
+        },
+      ],
+    },
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
