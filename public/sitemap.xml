@@ -1,116 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
     <loc>https://www.sopheak.site/</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://www.sopheak.site/hero.jpg</image:loc>
-      <image:title>Sopheak Hun — Web Developer &amp; DevOps Engineer in Cambodia</image:title>
-      <image:caption>Professional Web Developer and DevOps Engineer based in Phnom Penh, Cambodia specializing in Laravel, NuxtJS, and cloud infrastructure</image:caption>
-    </image:image>
   </url>
 
-  <!-- About Section -->
   <url>
-    <loc>https://www.sopheak.site/#about</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://www.sopheak.site/devops-engineer-in-cambodia</loc>
   </url>
 
-  <!-- Projects Section -->
   <url>
-    <loc>https://www.sopheak.site/#projects</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <!-- Contact Section -->
-  <url>
-    <loc>https://www.sopheak.site/#contact</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- Resume PDF -->
-  <url>
-    <loc>https://www.sopheak.site/_nuxt/Hun_Sopheak_Web_Development.BaWwb_tM.pdf</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <!-- Project: Accounting System -->
-  <url>
-    <loc>https://www.sopheak.site/#project-accounting</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://www.sopheak.site/accounting.jpg</image:loc>
-      <image:title>Accounting System — Laravel &amp; NuxtJS Web Application by Sopheak Hun</image:title>
-      <image:caption>Accounting system managing deposits, withdrawals, money transfers, and cash flow monitoring — built with NuxtJS, MySQL, and Laravel</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Project: Loan System -->
-  <url>
-    <loc>https://www.sopheak.site/#project-loan</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://www.sopheak.site/loan.jpg</image:loc>
-      <image:title>Loan Management System — Laravel &amp; NuxtJS by Sopheak Hun</image:title>
-      <image:caption>Loan system handling loan applications, payment rescheduling, and report generation — built with NuxtJS, MySQL, and Laravel</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Project: Soccer Website -->
-  <url>
-    <loc>https://www.sopheak.site/#project-soccer</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://www.sopheak.site/voicesport.jpg</image:loc>
-      <image:title>Soccer Live Scores Website — NuxtJS &amp; Cloud Firestore by Sopheak Hun</image:title>
-      <image:caption>Real-time soccer website with live scores, match schedules, and live streaming using Cloud Firestore and NuxtJS</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Project: Hotel Management System -->
-  <url>
-    <loc>https://www.sopheak.site/#project-hotel</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://www.sopheak.site/hotel.jpg</image:loc>
-      <image:title>Hotel Management System — Laravel &amp; NuxtJS by Sopheak Hun</image:title>
-      <image:caption>Hotel management with invoicing, housekeeping, mail management, and expense tracking — built with NuxtJS, MySQL, and Laravel</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Project: HR Management System -->
-  <url>
-    <loc>https://www.sopheak.site/#project-hr</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://www.sopheak.site/hr.jpg</image:loc>
-      <image:title>Human Resource Management System — Laravel &amp; NuxtJS by Sopheak Hun</image:title>
-      <image:caption>HRMS with payroll, staff, department, allowance, deduction, and payslip automation — built with NuxtJS, MySQL, and Laravel</image:caption>
-    </image:image>
+    <loc>https://www.sopheak.site/web-developer-in-cambodia</loc>
   </url>
 
 </urlset>

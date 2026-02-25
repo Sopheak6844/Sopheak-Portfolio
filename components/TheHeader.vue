@@ -2,6 +2,7 @@
 import { NAV_LINKS } from '@/data/constants'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useNuxtApp } from '#app'
+import { useRouter, useRoute } from 'vue-router'
 
 type Props = {
   y: number
@@ -12,7 +13,10 @@ const { y, goTop } = defineProps<Props>()
 
 const isOpen = ref(false)
 
-// get Lenis instance (if available)
+const router = useRouter()
+const route = useRoute()
+
+// Lenis instance (if available)
 const nuxtApp = useNuxtApp()
 const lenis = (nuxtApp as any).$lenis as
   | { scrollTo?: (target: any, opts?: any) => void }
@@ -28,62 +32,70 @@ onBeforeUnmount(() => {
   headerEl = null
 })
 
-/**
- * Smooth scroll to an anchor or pixel position.
- * - If href starts with '#' -> treat as in-page anchor and scroll to it.
- * - If external -> perform normal navigation.
- * - Uses lenis.scrollTo if available, otherwise native scroll with behavior: 'smooth'.
- */
-function handleNav(href: string) {
+function scrollToId(id: string) {
+  const target = document.getElementById(id)
+  if (!target) return
+
+  const headerHeight =
+    (headerEl?.getBoundingClientRect().height ?? 0) + 8
+
+  const top =
+    window.pageYOffset +
+    target.getBoundingClientRect().top -
+    headerHeight
+
+  if (lenis && typeof lenis.scrollTo === 'function') {
+    lenis.scrollTo(Math.round(top))
+  } else {
+    window.scrollTo({ top: Math.round(top), behavior: 'smooth' })
+  }
+
+  isOpen.value = false
+}
+
+async function handleNav(href: string) {
   if (!href) return
 
-  // external / full URLs should navigate normally
   const isHash = href.startsWith('#')
   const isExternal = href.startsWith('http') || href.startsWith('//')
 
+  // External link
   if (isExternal && !isHash) {
-    // allow normal navigation (open in new tab if target set)
     window.location.href = href
     return
   }
 
+  // Hash link (in-page anchor)
   if (isHash) {
     const id = href.slice(1)
-    const target = document.getElementById(id)
-    if (!target) return
 
-    // compute offset (header height)
-    const headerHeight =
-      (headerEl?.getBoundingClientRect().height ?? 0) + 8 /* extra gap */
-
-    // target top coordinate relative to document
-    const top =
-      window.pageYOffset + target.getBoundingClientRect().top - headerHeight
-
-    if (lenis && typeof lenis.scrollTo === 'function') {
-      // Lenis accepts number (pixels) or selector/element; pixel number respects offset
-      lenis.scrollTo(Math.round(top))
-    } else {
-      // native fallback
-      window.scrollTo({ top: Math.round(top), behavior: 'smooth' })
+    // If not on homepage → navigate first
+    if (route.path !== '/') {
+      await router.push('/')
+      setTimeout(() => {
+        scrollToId(id)
+      }, 200)
+      return
     }
 
-    // close mobile menu (if open)
-    isOpen.value = false
+    // Already on homepage
+    scrollToId(id)
     return
   }
 
-  // default fallback - navigate
-  window.location.href = href
+  // Normal route navigation
+  await router.push(href)
+  isOpen.value = false
 }
 </script>
+
 <template>
   <header
     class="fixed w-full z-20 top-0 duration-200 px-4 border-b border-solid"
-   :class="{
-  'py-4 dark:bg-black bg-slate-200 border-primary border-b-2': y > 0 || isOpen,
-  'py-6 bg-transparent border-transparent': !(y > 0 || isOpen)
-}"
+    :class="{
+      'py-4 dark:bg-black bg-slate-200 border-primary border-b-2': y > 0 || isOpen,
+      'py-6 bg-transparent border-transparent': !(y > 0 || isOpen)
+    }"
   >
     <nav class="flex flex-row items-center justify-between max-w-[1400px] mx-auto">
       <div
@@ -116,10 +128,10 @@ function handleNav(href: string) {
         </button>
       </div>
 
+      <!-- Desktop -->
       <nav class="items-center flex-row hidden md:flex">
         <div class="flex pr-3">
           <div class="sm:flex items-center gap-4 text-center hidden">
-            <!-- Desktop links: use handleNav to trigger Lenis -->
             <a
               v-for="link in NAV_LINKS"
               :key="link.href"
@@ -147,13 +159,13 @@ function handleNav(href: string) {
       </nav>
     </nav>
 
-    <!-- Mobile menu -->
+    <!-- Mobile -->
     <nav
       v-show="isOpen"
       @click="isOpen = false"
       class="md:hidden p-4 mt-2 flex flex-col gap-2 text-center font-bold"
       :class="{
-        'py-4 dark:bg-slate-950 bg-slate-200 border-primary  dark:border-green-950 ': y > 0,
+        'py-4 dark:bg-slate-950 bg-slate-200 border-primary dark:border-green-950': y > 0,
         'py-6 bg-transparent border-transparent': y <= 0
       }"
     >
@@ -168,9 +180,8 @@ function handleNav(href: string) {
       </a>
 
       <a
-        href="https://linkedin.com/"
+        href="https://www.linkedin.com/in/sopheak-hun/"
         target="_blank"
-        aria-label="Contact page link"
         class="rounded p-2 bg-primary animate-link"
       >
         Get in touch
@@ -180,10 +191,9 @@ function handleNav(href: string) {
 </template>
 
 <style scoped>
-/* small tweak so the mobile overlay sits below the header height on most devices.
-   If you need a different offset, adjust the top value above (top-16). */
 @media (max-width: 768px) {
-  header { --header-height: 4rem; }
+  header {
+    --header-height: 4rem;
+  }
 }
-
 </style>
