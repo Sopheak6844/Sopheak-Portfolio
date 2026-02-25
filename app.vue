@@ -63,7 +63,8 @@ useHead({
         ],
         sameAs: [
           "https://github.com/Sopheak6844",
-          "https://linkedin.com/in/sopheak-hun/"
+          "https://linkedin.com/in/sopheak-hun/",
+          "https://www.facebook.com/denki.hun"
         ]
       })
     }
