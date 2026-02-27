@@ -27,7 +27,7 @@ useHead({
     {
       name: "google-site-verification",
       content: "370GbEZWEoxI2gp66i_pvfoAqP0ZUnyYas2E28C4-Q0"
-    }
+    },
   ],
 
   script: [

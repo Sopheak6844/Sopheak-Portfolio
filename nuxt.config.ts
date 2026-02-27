@@ -9,6 +9,7 @@ app: {
         name: "google-site-verification",
         content: "sL0BqO-SClV_hO97BHNFJlKyHXgNewc-VSrzvi7jiqo",
       },
+       { name: 'robots', content: 'index, follow' },
     ],
   },
 },
